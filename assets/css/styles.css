@@ -88,6 +88,24 @@ button {
     transition: background 1s;
 }
 
+input, textarea {
+    border: 2px solid var(--primary-color-contrast);
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    padding: 8px;
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: none;
+    border-color: var(--field-background-color);
+}
+
 /* HEADER */
 
 header {
@@ -174,6 +192,16 @@ main {
     align-items: center;
 }
 
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--page-background) no-repeat, url('../images/backgrounds/florest.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
 section { 
     display: flex;
     justify-content: space-between;
@@ -231,6 +259,11 @@ section {
 }
 
 /* SECTION 03 - GALLERY */
+#section-stranger-things-gallery {
+    width: 100%;
+    justify-content: center;
+    background: var(--background-lamp-image) 90% / 50% no-repeat;
+}
 
 #section-stranger-things-gallery .container {
     width: 100%;
@@ -239,22 +272,132 @@ section {
 #section-stranger-things-gallery .container h2 {
     width: 800px;
     position: relative;
-    left: -95px;
+
 }
 
 #section-stranger-things-gallery .gallery-container  {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 50px;
 }
 
 #section-stranger-things-gallery .gallery-container .gallery-image {
-
+    width: 250px;
+    height: 250px;
+    outline: 20px solid var(--highlight-color);
+    border: 3px solid var(--primary-color);
+    box-sizing: initial;
 }
 
 #section-stranger-things-gallery .gallery-container .gallery-image img{
-    max-width: 300px;
-    height: 200px;
+    max-width: 100%;
+    height: 100%;
     object-fit: cover;
+    border: 10px solid var(--highlight-color);
 }
 
+/* SECTION 4 - D&D CLUB FORM */
+
+#section-form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+#section-form h2{
+    width: 600px;
+}
+
+#section-form .form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+}
+
+#section-form .form-content h3 {
+    color: var(--highlight-color);
+    flex-basis: 30%;
+}
+
+#section-form .form-content h3 span{
+    color: var(--primary-color);
+}
+
+#section-form .form-container {
+    flex-basis: 50%;
+    position: relative;
+}
+
+#section-form .form-container::after {
+    content: "";
+    background-color: var(--highlight-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: -1;
+}
+
+#section-form .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    text-align: left;
+}
+
+#section-form .form-container form button {
+    border: none;
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    max-width: 300px;
+    align-self: center;
+}
+
+#section-form .form-container form button:hover {
+    background-color: var(--primary-color-contrast);
+    color: var(--field-background-color);
+}
+
+footer {
+    padding: 60px 0;
+    background-color: var(--footer-background-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+footer::after, footer::before {
+    content: "";
+    width: 300px;
+    height: 200px;
+    background: url("../images/footer/tape.svg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -30px;
+}
+
+footer::after {
+    right: -50px;
+    transform: rotateZ(10deg);
+}
+
+footer::before {
+    left: -50px;
+    transform: rotateZ(-10deg);
+}
