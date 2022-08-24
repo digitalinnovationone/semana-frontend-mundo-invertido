@@ -1,0 +1,425 @@
+/***  FONTS ***/
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+/***  VARIABLES & THEMES ***/
+
+:root {
+  --primary-color: #cf0f0f;
+  --primary-color-contrast: #ffffff;
+  --field-background-color: #000;
+}
+
+.light-theme {
+  --page-background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 65%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  --header-background-color: #e3e3e3;
+  --highlight-color: #000000;
+  --featured-font-family: "Archivo", sans-serif;
+  --character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
+  --character-top-image-color: #ffffff;
+  --character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
+  --character-bottom-image-color: #e5e5e5;
+  --background-lamp-image: url("../images/backgrounds/lamps.png");
+  --footer-background-color: #b5bbbf;
+}
+
+.dark-theme {
+  --page-background: linear-gradient(
+    180deg,
+    #050000 0%,
+    #130404 65%,
+    rgba(19, 1, 1, 0.75) 100%
+  );
+  --header-background-color: #220f0f;
+  --highlight-color: #ffffff;
+  --featured-font-family: "Rubik Glitch", sans-serif;
+  --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
+  --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+  --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
+  --character-top-image-color: #000;
+  --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
+  --footer-background-color: #000;
+}
+
+.dark-theme button,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+
+.dark-theme .invert-element {
+  transform: rotateZ(180deg) scaleX(-1);
+}
+
+/***  GENERIC STYLES ***/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+body {
+  background: var(--page-background);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--featured-font-family);
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+p {
+  color: var(--highlight-color);
+}
+
+p,
+input,
+textarea,
+label {
+  font-family: "Libre Baskerville", serif;
+}
+
+button {
+  padding: 16px 32px;
+  background-color: transparent;
+  font-weight: 900;
+  font-family: var(--featured-font-family);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--page-background) no-repeat,
+    url("../images/backgrounds/florest.png") no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+input,
+textarea {
+  border: 2px solid var(--primary-color-contrast);
+  background-color: var(--field-background-color);
+  color: var(--primary-color-contrast);
+  padding: 8px;
+}
+
+input,
+textarea {
+  margin-bottom: 24px;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: black;
+}
+
+/*** HEADER STYLES ***/
+
+header {
+  background-color: var(--header-background-color);
+  min-height: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../images/banner/florest.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 90%;
+  filter: saturate(0);
+  opacity: 0.2;
+}
+
+.header-content {
+  max-width: 700px;
+  padding: 80px 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.header-content img {
+  width: 80%;
+}
+
+.header-content p {
+  margin: 30px 0 50px;
+}
+
+.header-content button {
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.header-content button:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+}
+
+/*** WORLD CHARACTERS STYLES ***/
+
+.world-characters {
+  width: 100%;
+  max-width: 900px;
+  position: absolute;
+}
+
+.world-characters#top-characters {
+  height: 100%;
+  background-color: var(--character-top-image-color);
+  bottom: -3px;
+
+  mask: var(--character-top-image-src) bottom / contain no-repeat;
+  -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+}
+
+.world-characters#bottom-characters {
+  height: 500px;
+  background-color: var(--character-bottom-image-color);
+  top: 3px;
+  transform: rotateZ(180deg) scaleX(-1);
+  position: relative;
+
+  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+  -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+}
+
+/*** SECTIONS STYLES ***/
+
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+
+/* Section 01 - Inverted World */
+
+.container {
+  max-width: 1200px;
+}
+
+#section-inverted-world {
+  align-items: center;
+}
+
+#section-inverted-world .section-texts {
+  width: 50%;
+}
+
+#section-inverted-world .section-texts h2 {
+  max-width: 300px;
+}
+
+/* Section 02 - Stranger Things Trailer */
+
+#section-stranger-things-trailer .section-texts {
+  width: 50%;
+  text-align: right;
+}
+
+#section-stranger-things-trailer .section-texts h2 {
+  max-width: 425px;
+  display: inline-block;
+}
+
+#section-stranger-things-trailer .video-frame {
+  background-color: var(--primary-color);
+}
+
+#section-stranger-things-trailer .video-frame iframe {
+  position: relative;
+  bottom: 24px;
+  left: 24px;
+  border: 2px solid;
+  border-image: linear-gradient(
+    var(--primary-color),
+    var(--primary-color-contrast)
+  );
+  border-image-slice: 10;
+}
+
+/* Section 03 - Stranger Things Gallery */
+
+#section-stranger-things-gallery {
+  width: 100%;
+  background: var(--background-lamp-image) 120% / 50% no-repeat;
+  justify-content: center;
+}
+
+#section-stranger-things-gallery .container {
+  width: 100%;
+}
+
+#section-stranger-things-gallery .container h2 {
+  width: 800px;
+}
+
+#section-stranger-things-gallery .gallery-container {
+  display: flex;
+  gap: 50px;
+  padding-left: 20px;
+}
+
+#section-stranger-things-gallery .gallery-image {
+  width: 250px;
+  height: 250px;
+  outline: 20px solid var(--highlight-color);
+  border: 3px solid var(--primary-color);
+  box-sizing: initial;
+}
+
+#section-stranger-things-gallery .gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 10px solid var(--highlight-color);
+}
+
+/* Section 04 - Dungeons & Dragons Form */
+
+#section-form {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+#section-form h2 {
+  width: 600px;
+}
+
+#section-form .form-content h3 {
+  color: var(--highlight-color);
+}
+
+#section-form .form-content h3 span {
+  color: var(--primary-color);
+}
+
+#section-form .form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#section-form .form-content h3 {
+  flex-basis: 30%;
+  text-align: left;
+  margin: 0;
+}
+
+#section-form .form-container {
+  flex-basis: 50%;
+  position: relative;
+}
+
+#section-form .form-container::after {
+  content: "";
+  background-color: var(--highlight-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: -1;
+}
+
+#section-form .form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+  text-align: left;
+}
+
+#section-form .form-container form button {
+  border: none;
+  background-color: var(--field-background-color);
+  color: var(--primary-color-contrast);
+  max-width: 300px;
+  align-self: center;
+}
+
+#section-form .form-container form button:hover {
+  background-color: var(--primary-color-contrast);
+  color: var(--field-background-color);
+}
+
+/*** FOOTER STYLES ***/
+
+footer {
+  padding: 60px 0;
+  background-color: var(--footer-background-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer p {
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+footer::before,
+footer::after {
+  content: "";
+  width: 300px;
+  height: 200px;
+  background: url("../images/footer/tape.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -30px;
+}
+
+footer::before {
+  left: -50px;
+  transform: rotateZ(-10deg);
+}
+
+footer::after {
+  right: -50px;
+  transform: rotateZ(10deg);
+}
