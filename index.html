@@ -10,7 +10,7 @@
   </head>
   <body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
     <header aria-label="Cabeçalho da página.">
-      <audio id="music" autoplay>
+      <audio id="music">
         <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site" />
       </audio>
       <div class="header-content">
@@ -49,15 +49,25 @@
         />
       </section>
 
-      <section id="section-stranger-things-trailer" class="container">
+      <section id="section-stranger-things-trailers" class="container">
         <div class="video-frame" aria-hidden="true">
           <iframe
             width="460"
             height="215"
-            src="https://www.youtube.com/embed/SJ9EFhQ3ANQ?controls=0"
+            src="https://www.youtube.com/embed/yTX0HxTq9wo?controls=0?hl=pt-br&cc_lang_pref=pt-br"
             title="YouTube video player"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+            allowfullscreen
+          ></iframe>
+        
+          <iframe
+            width="460"
+            height="215"
+            src="https://www.youtube.com/embed/otutSrxYpa4?controls=0?hl=pt-br&cc_lang_pref=pt-br"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             allowfullscreen
           ></iframe>
         </div>
@@ -104,17 +114,17 @@
 
           <div class="form-container">
             <form>
-              <label for="name">Nome Completo</label>
-              <input type="text" name="name" id="txtName">
+              <label for="name">Nome Completo
+              <input type="text" name="name" id="name"></label>
           
-              <label for="email">E-mail</label>
-              <input type="email" name="email" id="txtEmail">
+              <label for="email">E-mail
+              <input type="email" name="email" id="email"></label>
           
-              <label for="level">Level</label>
-              <input type="text" name="level" id="txtLevel">
+              <label for="level">Level
+              <input type="text" name="level" id="level"></label>
           
-              <label for="character">Personagem</label>
-              <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+              <label for="character">Personagem
+              <textarea name="character" cols="30" rows="10" id="character"></textarea></label>
             
               <button type="button" id="btnSubscribe">Me inscrever</button>
             </form>

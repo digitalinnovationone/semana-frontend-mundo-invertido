@@ -1,0 +1,260 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+/* VARIABLES & THEMES */
+
+:root {
+    --primary-color: #cf0f0f;
+    --primary-color-contrast: #ffffff;
+    --field-background-color: #000;
+  }
+  
+  .light-theme {
+    --page-background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #ffffff 65%,
+      rgba(255, 255, 255, 0.75) 100%
+    );
+    --header-background-color: #e3e3e3;
+    --highlight-color: #000000;
+    --featured-font-family: "Archivo", sans-serif;
+    --character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --character-top-image-color: #ffffff;
+    --character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
+    --character-bottom-image-color: #e5e5e5;
+    --background-lamp-image: url("../images/backgrounds/lamps.png");
+    --footer-background-color: #b5bbbf;
+  }
+  
+  .dark-theme {
+    --page-background: linear-gradient(
+      180deg,
+      #050000 0%,
+      #130404 65%,
+      rgba(19, 1, 1, 0.75) 100%
+    );
+    --header-background-color: #220f0f;
+    --highlight-color: #ffffff;
+    --featured-font-family: "Rubik Glitch", sans-serif;
+    --texts-font-family: "Libre Baskerville", serif;
+    --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+    --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
+    --character-top-image-color: #000;
+    --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
+    --footer-background-color: #000;
+  }
+
+/* GENERAL STYLES */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--featured-font-family);
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+p, input, label, textarea {
+    font-family: var(--texts-font-family);
+}
+
+p {
+    color: var(--highlight-color);
+    line-height: 1.5;
+}
+
+button {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    font-family: var(--featured-font-family);
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--header-background-color);
+    min-height: 54rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../images/banner/florest.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    filter: saturate(0);
+    opacity: 0.25;
+}
+
+.header-content {
+    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 1.25rem;
+    z-index: 1;
+}
+
+.header-content img {
+    max-width: 80%;
+}
+
+.header-content p {
+    margin: 30px 0 90px;
+}
+
+.header-content button {
+    border: 4px var(--primary-color) solid;
+    color: var(--primary-color);
+}
+
+.header-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+}
+
+/* WORLD CHARACTERS */
+
+.world-characters {
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+}
+
+#top-characters {
+    height: 100%;
+    background-color: var(--character-top-image-color);
+    mask: var(--character-top-image-src) bottom / 100% no-repeat;
+    -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+}
+
+#bottom-characters {
+    height: 500px;
+    background-color: var(--character-bottom-image-color);
+    position: relative;
+    top: 3px;
+    transform: rotateZ(180deg) scaleX(-1);
+    mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+    -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+}
+
+/* MAIN */
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section { 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* SECTION 01 - INVERTED WORLD */
+
+#section-inverted-world {
+    align-items: center;
+}
+
+#section-inverted-world .section-texts {
+    width: 50%;
+}
+
+#section-inverted-world .section-texts h1{
+    max-width: 300px;
+}
+
+/* SECTION O2 - TRAILERS */
+
+#section-stranger-things-trailers {
+    width: 90%;
+    text-align: right;
+    justify-content: space-between;
+}
+
+#section-stranger-things-trailers .section-texts {
+    margin-left: 5rem;
+    width: 50%;
+}
+
+#section-stranger-things-trailers .video-frame {
+    background-color: var(--primary-color);
+    height: 450px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#section-stranger-things-trailers .video-frame iframe {
+    position: relative;
+    bottom: 8%;
+    left: 8%;
+    border: 2px solid;
+    border-image: linear-gradient(var(--primary-color), var(--primary-color-contrast));
+    border-image-slice: 10;
+}
+
+/* SECTION 03 - GALLERY */
+
+#section-stranger-things-gallery .container {
+    width: 100%;
+}
+
+#section-stranger-things-gallery .container h2 {
+    width: 800px;
+    position: relative;
+    left: -95px;
+}
+
+#section-stranger-things-gallery .gallery-container  {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+#section-stranger-things-gallery .gallery-container .gallery-image {
+
+}
+
+#section-stranger-things-gallery .gallery-container .gallery-image img{
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
