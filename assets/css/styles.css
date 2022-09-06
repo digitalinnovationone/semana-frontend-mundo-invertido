@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+:root {
+    --primary-color: #cf0f0f;
+    --primary-color-contrast: #ffffff;
+    --field-background-color: #000;
+  }
+
+  .light-theme {
+    --page-background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #ffffff 65%,
+      rgba(255, 255, 255, 0.75) 100%
+    );
+    --header-background-color: #e3e3e3;
+    --highlight-color: #000000;
+    --featured-font-family: "Archivo", sans-serif;
+    --character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --character-top-image-color: #ffffff;
+    --character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
+    --character-bottom-image-color: #e5e5e5;
+    --background-lamp-image: url("../images/backgrounds/lamps.png");
+    --footer-background-color: #b5bbbf;
+  }
+
+  .dark-theme {
+    --page-background: linear-gradient(
+      180deg,
+      #050000 0%,
+      #130404 65%,
+      rgba(19, 1, 1, 0.75) 100%
+    );
+    --header-background-color: #220f0f;
+    --highlight-color: #ffffff;
+    --featured-font-family: "Rubik Glitch", sans-serif;
+    --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+    --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
+    --character-top-image-color: #000;
+    --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
+    --footer-background-color: #000;
+  }
+
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    color: var(--primary-color);
+    font-family: var(--featured-font-family);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  p {
+    color: var(--highlight-color);
+  }
+
+  p, textarea, input, label {
+    font-family: "Libre Baskerville", serif;
+  }
+
+  button {
+    padding: 16px 32px;
+    background-color: transparent;
+    font-weight: 900;
+    font-family: var(--featured-font-family);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 1s;
+  }
+
+/*** HEADER STYLES ***/
+
+  header {
+    background-color: var(--header-background-color);
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../images/banner/florest.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    filter: saturate(0);
+    opacity: 0.2;
+  }
+
+  .header-content {
+    max-width: 700px;
+    padding: 80px 20px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .header-content img {
+    width: 80%;
+  }
+
+  .header-content p {
+    margin: 30px 0 50px;
+  }
+
+  .header-content button {
+    border: 3px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .header-content button:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+  }
+
+/*** WORLD CHARACTERS STYLES***/
+
+  .world-characters {
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+  }
+
+  #top-characters {
+    height: 100%;
+    background-color: var(--character-top-image-color);
+
+    mask: var(--character-top-image-src) bottom / contain no-repeat;
+    -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+  }
+
+  #bottom-characters {
+    height: 500px;
+    background-color: var(--character-bottom-image-color);
+    top: 3px;
+    transform: rotateZ(180deg) scaleX(-1);
+    position: relative;
+
+    mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+    -webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+  }
+
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+/*** SECTION STYLES ***/
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+  }
+
+/* Section 01 - Inverted World */
+
+  .container {
+    max-width: 1200px;
+  }
+
+  #section-inverted-world {
+    align-items: center;
+  }
+
+  .section-texts {
+    width: 50%;
+  }
+
+  .section-texts h1 {
+    max-width: 300px;
+  }
+
+  /* Section 02 - Stranger Things Trailer */
+
+  
+
+  
+
