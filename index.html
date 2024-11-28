@@ -10,7 +10,7 @@
   </head>
   <body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
     <header aria-label="Cabeçalho da página.">
-      <audio id="music" autoplay>
+      <audio id="music" autoplay loop>
         <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site" />
       </audio>
       <div class="header-content">
@@ -62,7 +62,7 @@
           ></iframe>
         </div>
         <div class="section-texts">
-          <h2>Stranger Things Vol. 4</h2>
+          <h3>Stranger Things Vol. 4</h3>
           <p role="text">
             Mais experientes, os heróis de Stranger Things também precisam
             enfrentar desafios maiores do que nunca e fazer decisões que vão
@@ -74,7 +74,7 @@
 
       <section id="section-stranger-things-gallery">
         <div class="container section-text">
-          <h2>A segunda série mais assistida da Netflix</h2>
+          <h3>A segunda série mais assistida da Netflix</h3>
           <ul class="gallery-container" role="gallery">
             <li class="gallery-image invert-element">
               <img src="assets/images/content/serie-image-01.png" alt="Imagem de Vecna" />
@@ -90,7 +90,7 @@
       </section>
 
       <section id="section-form" class="container">
-        <h2>O Clube Dungeons & Dragons</h2>
+        <h3>O Clube Dungeons & Dragons</h3>
         <p>
           Para deter Vecna, os heróis de Stranger Things também precisam de
           você. O Clube de D&D mais famoso de Hawkings está com vagas abertas
@@ -134,7 +134,10 @@
     
     <script type="module" src="assets/js/main.js"></script>
     <script>
-      
+      function switchTheme() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+      }
     </script>
   </body>
 </html>
