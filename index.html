@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mundo Invertido | Semana Front-end</title>
+    <title>Mundo Invertido</title>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+
   </head>
-  <body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
+  <body class="dark-theme" aria-label="O site está utilizando o tema light" role="body">
     <header aria-label="Cabeçalho da página.">
       <audio id="music" autoplay>
         <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site" />
@@ -33,7 +34,7 @@
 
       <section id="section-inverted-world" class="container">
         <div class="section-texts">
-          <h1>O Mundo Invertido</h1>
+          <h2>O Mundo Invertido</h2>
           <p role="text">
             O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas
             horrendas, tempestades assustadoras, muita escuridão e entidades
@@ -134,7 +135,11 @@
     
     <script type="module" src="assets/js/main.js"></script>
     <script>
-      
+      function switchTheme(){
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+
+      }
     </script>
   </body>
 </html>
