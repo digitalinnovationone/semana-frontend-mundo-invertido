@@ -155,7 +155,7 @@ header {
   align-items: center;
   position: relative;
 }
-
+/* Aqui é inserido a imagem de fundo do topo */
 header::before {
   content: "";
   width: 100%;
@@ -168,27 +168,27 @@ header::before {
   filter: saturate(0);
   opacity: 0.2;
 }
-
+/* "Caixa" que contem imagem, texto e botão do topo  */
 .header-content {
   max-width: 700px;
   padding: 80px 20px;
   text-align: center;
   z-index: 2;
 }
-
+/* Imagem do topo */
 .header-content img {
   width: 80%;
 }
-
+/* Texto do topo */
 .header-content p {
   margin: 30px 0 50px;
 }
-
+/* Botão de inverter mundos */
 .header-content button {
   border: 3px solid var(--primary-color);
   color: var(--primary-color);
 }
-
+/* Botão de inverter mundos */
 .header-content button:hover {
   background-color: var(--primary-color);
   color: var(--primary-color-contrast);
@@ -201,16 +201,17 @@ header::before {
   max-width: 900px;
   position: absolute;
 }
-
+/* Imagem Pessoas */
 .world-characters#top-characters {
   height: 100%;
   background-color: var(--character-top-image-color);
   bottom: -3px;
-
+/*mask funciona como backgroun-image porém dá a opção de alterarem a 
+visibilidade de um item parcialmente ou totalmente*/
   mask: var(--character-top-image-src) bottom / contain no-repeat;
   -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
 }
-
+/* Imagem monstro */
 .world-characters#bottom-characters {
   height: 500px;
   background-color: var(--character-bottom-image-color);
@@ -226,7 +227,8 @@ header::before {
 
 section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;/* distribui o espaço restante entre 
+  os elementos de forma igual*/
   margin-bottom: 95px;
 }
 
@@ -257,7 +259,9 @@ section {
 
 #section-stranger-things-trailer .section-texts h2 {
   max-width: 425px;
-  display: inline-block;
+  display: inline-block;/*Essa propriedade permite que o
+  conteúdo fique um do lado do outro e liberdade de atribuir
+   a eles width, height, margins e paddings*/
 }
 
 #section-stranger-things-trailer .video-frame {
