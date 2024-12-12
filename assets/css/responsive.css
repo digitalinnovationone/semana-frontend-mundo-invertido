@@ -1,0 +1,128 @@
+@media (max-width: 1266px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 2.5rem !important;
+  }
+
+  #section-inverted-world {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #section-inverted-world .invert-element {
+    width: 30%;
+  }
+
+  #section-stranger-things-trailer .video-frame iframe {
+    width: 400px;
+  }
+
+  #section-stranger-things-gallery .container h2 {
+    width: 700px !important;
+  }
+
+  #section-form .form-content {
+    justify-content: center !important;
+    gap: 100px;
+  }
+
+  footer::before,
+  footer::after {
+    content: "";
+    width: 260px !important;
+    height: 160px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  #section-stranger-things-trailer {
+    flex-direction: column-reverse;
+  }
+
+  #section-stranger-things-trailer .section-texts {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  #section-stranger-things-trailer .video-frame {
+    margin-top: 10px;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section-stranger-things-trailer .video-frame iframe {
+    bottom: 0px !important;
+    left: 0px !important;
+  }
+
+  #section-stranger-things-gallery .container h2 {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  #section-stranger-things-gallery .gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 20px;
+  }
+
+  #section-form .form-content {
+    flex-direction: column !important;
+    gap: 50px !important;
+  }
+
+  #section-form .form-container {
+    width: 70% !important;
+  }
+
+  #section-form .form-content h3 {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  #section-form p {
+    width: 96% !important;
+  }
+}
+
+@media (max-width: 568px) {
+  h1,
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+  }
+
+  #section-form p {
+    font-size: 0.6rem !important;
+  }
+
+  #section-form .form-content h3 {
+    font-size: 1.2rem !important;
+  }
+
+  footer::before,
+  footer::after {
+    content: "";
+    width: 200px !important;
+    height: 100px !important;
+  }
+
+  #section-stranger-things-trailer .video-frame iframe {
+    width: 300px !important;
+  }
+}
