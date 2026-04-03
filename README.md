@@ -1,36 +1,51 @@
-<p align="center">
-    <img width="300" src="https://micheleambrosio.github.io/semana-frontend-mundo-invertido/assets/images/banner/logo.svg">
-</p>
+# 🌐 Mundo Invertido - Semana Front-end DIO
 
--------
-Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo Invertido é incerto, repleto de obstáculos e perigos. Porém, a recompensa é grande: salvar Hawkings e o mundo todo das garras de Vecna. Você está preparado(a)? 
+Desafio de projeto da [Digital Innovation One (DIO)](https://www.dio.me/) — Semana Front-end. Uma página temática inspirada na série Stranger Things, com alternância entre o mundo normal e o Mundo Invertido.
 
-## ▶️ Semana Front-end
-- [Live Dia 01](https://www.youtube.com/watch?v=FZgIQUDn8zo)
-- [Live Dia 02](https://www.youtube.com/watch?v=WHbhgxJLbN4)
+## 🚀 Sobre o Projeto
+
+Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo Invertido é incerto, repleto de obstáculos e perigos. Porém, a recompensa é grande: salvar Hawkings e o mundo todo das garras de Vecna. Você está preparado(a)?
+
+### Funcionalidades
+
+- Alternância de tema (Mundo Normal / Mundo Invertido) com persistência via `localStorage`
+- Música ambiente que muda conforme o tema ativo
+- Formulário de inscrição no Clube D&D com validação
+- Layout responsivo para desktop, tablet e mobile
+- Animações e transições suaves na troca de tema
+
 ## 💻 Tecnologias
-- HTML
-- CSS
-- JavaScript
+
+- HTML5
+- CSS3 (Flexbox, CSS Variables, Media Queries, `clamp()`)
+- JavaScript (DOM, localStorage)
+
+## 📁 Estrutura do Projeto
+
+```
+├── index.html
+├── README.md
+└── assets/
+    ├── css/
+    │   └── styles.css
+    ├── js/
+    │   └── main.js
+    ├── images/
+    │   ├── backgrounds/
+    │   ├── banner/
+    │   ├── characters/
+    │   ├── content/
+    │   └── footer/
+    └── musics/
+        ├── inverted-world.mpeg
+        └── normal-world.mpeg
+```
 
 ## 💬 Assuntos abordados
-- HTML
-    - Estruturação da página 
-    - Semântica
-    - Acessibilidade
-    - Web Scraping
-    - SEO
-- CSS
-    - Posicionamentos
-    - Pseudo-elementos
-    - Pseudo-classes
-    - Flexbox
-    - Animações 
-- JavaScript
-    - Introdução ao JavaScript
-    - Manipulação do DOM
-    - Introdução ao Firebase
-    - Integração com o Firebase
+
+- **HTML** — Estruturação semântica, acessibilidade, SEO
+- **CSS** — Flexbox, pseudo-elementos, variáveis CSS, responsividade
+- **JavaScript** — Manipulação do DOM, localStorage, validação de formulário
 
 ## 🎨 Variáveis do Tema CSS
 ```css
@@ -80,28 +95,14 @@ Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo Inve
 ```
 ## 🔗 Links auxiliares
 
-- [W3C - World Wide Web Consortium](http://w3c.org)
-- [WAI - Web Acessibility Initiative](https://www.w3.org/WAI/)
-- [WCAG 2](https://www.w3.org/WAI/WCAG21/quickref/) 
-- [Figma](https://www.figma.com/file/I3Q42CcVUziRN3iMfTrbfb/Stranger-Things?node-id=0%3A1) 
-- [Demo](https://micheleambrosio.github.io/semana-frontend-mundo-invertido/) 
-## 🌎 Nossas redes sociais
-<p>
-    <img align=left margin=10 width=80 src="https://avatars.githubusercontent.com/u/16018277?v=4"/>
-    <p>&nbsp&nbsp&nbspDiogo Medeiros Mainardes<br>
-    &nbsp&nbsp&nbsp<a href="http://instagram.com/diogomainardes.dev">Instagram</a>&nbsp;|&nbsp;<a href="https://github.com/diogomainardes">GitHub</a>&nbsp;|&nbsp;<a href="https://www.linkedin.com/in/diogomainardes/">LinkedIn</a>&nbsp;|&nbsp;<a href="https://www.twitch.tv/dimmbr">Twitch</a></p>
-</p>
-<br/><br/>
-<p>
-    <img align=left margin=10 width=80 src="https://avatars.githubusercontent.com/u/55519539?v=4"/>
-    <p>&nbsp&nbsp&nbspMichele Queiroz Ambrosio<br>
-    &nbsp&nbsp&nbsp<a href="http://instagram.com/programi_">Instagram</a>&nbsp;|&nbsp;<a href="https://github.com/micheleambrosio">GitHub</a>&nbsp;|&nbsp;<a href="https://www.linkedin.com/in/michele-ambrosio-a4899661/">LinkedIn</a>&nbsp;|&nbsp;<a href="https://www.twitch.tv/michele_ambrosio">Twitch</a></p>
-</p>
-<br/><br/>
-<p>
-    <img align=left margin=10 width=80 src="https://avatars.githubusercontent.com/u/3266640?v=4"/>
-    <p>&nbsp&nbsp&nbspRenan Johannsen de Paula <br>
-    &nbsp&nbsp&nbsp<a href="https://github.com/RenanJPaula">GitHub</a>&nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/renanjpaula/">LinkedIn</a>
-    </p>
-</p>
+- [DIO - Digital Innovation One](https://www.dio.me/)
+- [Figma do Projeto](https://www.figma.com/file/I3Q42CcVUziRN3iMfTrbfb/Stranger-Things?node-id=0%3A1)
+- [Demo Original](https://micheleambrosio.github.io/semana-frontend-mundo-invertido/)
+
+## 🏆 Créditos
+
+Projeto base desenvolvido pelos instrutores da DIO na Semana Front-end:
+
+- **Diogo Mainardes** — [GitHub](https://github.com/diogomainardes) | [LinkedIn](https://www.linkedin.com/in/diogomainardes/)
+- **Michele Ambrosio** — [GitHub](https://github.com/micheleambrosio) | [LinkedIn](https://www.linkedin.com/in/michele-ambrosio-a4899661/)
+- **Renan Johannsen** — [GitHub](https://github.com/RenanJPaula) | [LinkedIn](https://www.linkedin.com/in/renanjpaula/)

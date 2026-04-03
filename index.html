@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo Invertido | Semana Front-end</title>
+    <meta name="description" content="Mundo Invertido - Uma jornada inspirada em Stranger Things. Projeto da Semana Front-end da DIO." />
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpeg" />
 
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
-    <header aria-label="Cabeçalho da página.">
-      <audio id="music" autoplay>
-        <source src="assets/musics/normal-world.mpeg" aria-details="Audio do site" />
+  <body class="light-theme">
+    <header>
+      <audio id="music" loop>
+        <source src="assets/musics/normal-world.mpeg" type="audio/mpeg" />
       </audio>
       <div class="header-content">
         <img class="invert-element" src="assets/images/banner/logo.svg" alt="Imagem principal Mundo Invertido. Semana Frontend DIO." />
-        <p class="invert-element" role="text">
+        <p class="invert-element">
           Uma jornada para quem não tem medo do desconhecido. O caminho para o
           Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a
           recompensa é grande: salvar Hawkings e o mundo todo das garras de
           Vecna. Você está preparado? Então clique no botão abaixo para entrar
           no Mundo Invertido!
         </p>
-        <button id="switch-theme-button" onclick="switchTheme()">Inverter Mundos</button>
+        <button id="switch-theme-button">Inverter Mundos</button>
       </div>
 
       <div id="top-characters" class="world-characters"></div>
@@ -33,8 +35,8 @@
 
       <section id="section-inverted-world" class="container">
         <div class="section-texts">
-          <h1>O Mundo Invertido</h1>
-          <p role="text">
+          <h2>O Mundo Invertido</h2>
+          <p>
             O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas
             horrendas, tempestades assustadoras, muita escuridão e entidades
             malignas. Um reino controlado por Vecna, que tem planos de trazer
@@ -45,25 +47,28 @@
         <img
           class="invert-element"
           src="assets/images/content/inverted-world.png"
-          alt="Image ilustrativa do Mundo Invertido"
+          alt="Imagem ilustrativa do Mundo Invertido"
+          loading="lazy"
         />
       </section>
 
       <section id="section-stranger-things-trailer" class="container">
-        <div class="video-frame" aria-hidden="true">
+        <div class="video-frame">
           <iframe
+            style="max-width: 100%;"
             width="460"
             height="215"
             src="https://www.youtube.com/embed/SJ9EFhQ3ANQ?controls=0"
-            title="YouTube video player"
+            title="Trailer Stranger Things Vol. 4"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
         <div class="section-texts">
           <h2>Stranger Things Vol. 4</h2>
-          <p role="text">
+          <p>
             Mais experientes, os heróis de Stranger Things também precisam
             enfrentar desafios maiores do que nunca e fazer decisões que vão
             mudar suas vidas para sempre. Confira ao lado o trailer da quarta
@@ -75,22 +80,22 @@
       <section id="section-stranger-things-gallery">
         <div class="container section-text">
           <h2>A segunda série mais assistida da Netflix</h2>
-          <ul class="gallery-container" role="gallery">
+          <ul class="gallery-container">
             <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-01.png" alt="Imagem de Vecna" />
+              <img src="assets/images/content/serie-image-01.png" alt="Imagem de Vecna" loading="lazy" />
             </li>
             <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-02.png" alt="Imagem ilustrativa dos amigos de Eleven" />
+              <img src="assets/images/content/serie-image-02.png" alt="Imagem ilustrativa dos amigos de Eleven" loading="lazy" />
             </li>
             <li class="gallery-image invert-element">
-              <img src="assets/images/content/serie-image-03.png" alt="Imagem Eleven assustada" />
+              <img src="assets/images/content/serie-image-03.png" alt="Imagem Eleven assustada" loading="lazy" />
             </li>
           </ul>
         </div>
       </section>
 
       <section id="section-form" class="container">
-        <h2>O Clube Dungeons & Dragons</h2>
+        <h2>O Clube Dungeons &amp; Dragons</h2>
         <p>
           Para deter Vecna, os heróis de Stranger Things também precisam de
           você. O Clube de D&D mais famoso de Hawkings está com vagas abertas
@@ -100,21 +105,21 @@
         </p>
 
         <div class="form-content">
-          <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
+          <h3>Entre para o clube de D&amp;D e tenha experiências de <span>outro mundo</span></h3>
 
           <div class="form-container">
             <form>
               <label for="name">Nome Completo</label>
-              <input type="text" name="name" id="txtName">
+              <input type="text" name="name" id="txtName" required>
           
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="txtEmail">
+              <input type="email" name="email" id="txtEmail" required>
           
               <label for="level">Level</label>
-              <input type="text" name="level" id="txtLevel">
+              <input type="text" name="level" id="txtLevel" required>
           
               <label for="character">Personagem</label>
-              <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+              <textarea name="character" rows="5" id="txtCharacter" required></textarea>
             
               <button type="button" id="btnSubscribe">Me inscrever</button>
             </form>
@@ -129,12 +134,9 @@
         Projeto construído para fins didáticos, com o objetivo de colocar em
         prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO._
       </p>
-      <img src="assets/images/footer/logo.svg" alt="">
+      <img src="assets/images/footer/logo.svg" alt="Logo DIO">
     </footer>
     
-    <script type="module" src="assets/js/main.js"></script>
-    <script>
-      
-    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
